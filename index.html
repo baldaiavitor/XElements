@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script type="module" src="/XElements/XElements.js"></script>
+  <script>
+
+  </script>
 </head>
 
 <body>
   <x-app style="background-color: black;">
-    <x-content-placer style="background-color: aquamarine;" x="25px" y="25px"></x-content-placer>
-    <x-content-placer style="background-color: red;" x="575px" y="25px"></x-content-placer>
-    <x-content-placer style="background-color: red;" x="70%" y="25px"></x-content-placer>
+    <x-content-placer id="xcp1" style="background-color: aquamarine;" height="30px" width="100%" x="0px" y="0px">Content Placer 1 : Menu like style</x-content-placer>
+    <x-content-placer id="xcp2" style="background-color: red;" x="25px" y="150px">Content Placer 2 : Content like style</x-content-placer>
+    <x-content-placer id="xcp3" style="background-color: red;" x="calc(40% + 85px)" y="150px">Content Placer 3 : Content like style</x-content-placer>
+    <x-content-placer id="xcp3" style="background-color: red;" width="100%" height="30px" x="0" y="calc(100% - 30px)">Content Placer 4 : footer like style</x-content-placer>
   </x-app>
 </body>
 

@@ -2,8 +2,7 @@ export default class XApp extends HTMLElement {
     constructor() {
         super();
         let innerHTML = this.innerHTML;
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = innerHTML;
+        this.innerHTML = innerHTML;
         this.style.position = "absolute";
         this.style.width = "100%";
         this.style.height = "100%";

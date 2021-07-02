@@ -1,5 +1,8 @@
 # XElements
 
+### Purpose
+the purpose of this repo is to learn about html Custom Elements
+
 ### Sample Usage
 * 1 - git clone <this_repo_url>
 * 2 - open with vscode
