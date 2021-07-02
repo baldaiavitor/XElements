@@ -1,3 +1,6 @@
+// TODO fix bugs when adding the element with javascript "document-createElement('x-content-placer')"
+
+var innerHTML
 export default class XContentPlacer extends HTMLElement {
     static get observedAttributes() {
         return ['x','y'];
@@ -5,11 +8,11 @@ export default class XContentPlacer extends HTMLElement {
 
     constructor() {
         super();
-        let innerHTML = this.innerHTML;
+        innerHTML  = this.innerHTML;
         this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = innerHTML;
     }
     connectedCallback(){
-        //this.shadowRoot.innerHTML = innerHTML;
         this.style.width = "20%";
         this.style.height = "20%";
         this.style.margin = "0";

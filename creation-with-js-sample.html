@@ -57,6 +57,9 @@
             xelement.setAttribute('height', elementParameters.size.height);
           }
           xelement.style.backgroundColor = "red";
+          let text = document.createElement('span');
+          text.innerText = elementName;
+          xelement.appendChild(text);
           xapp.appendChild(xelement);
         }
       }
