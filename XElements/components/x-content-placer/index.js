@@ -7,7 +7,9 @@ export default class XContentPlacer extends HTMLElement {
         super();
         let innerHTML = this.innerHTML;
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = innerHTML;
+    }
+    connectedCallback(){
+        //this.shadowRoot.innerHTML = innerHTML;
         this.style.width = "20%";
         this.style.height = "20%";
         this.style.margin = "0";

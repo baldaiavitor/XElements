@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="/XElements/XElements.js"></script>
+  <script>
+    let layout = {
+      topmenu:{
+        position: {
+          x: "0px",
+          y: "0px",
+        },
+        size: {
+          width:"100%",
+          height:"30px"
+        }
+      },
+      content1:{
+        position: {
+          x: "25px",
+          y: "150px"
+        }
+      },
+      content2:{
+        position: {
+          x: "calc(40% + 85px)",
+          y: "150px"
+        }
+      },
+      footer:{
+        position: {
+          x: "0px",
+          y: "calc(100% - 30px)",
+        },
+        size: {
+          width:"100%",
+          height:"30px"
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      let xapp = document.getElementById('x-app');
+      for (var elementName in layout) {
+        if (layout.hasOwnProperty(elementName)) {
+          let elementParameters = layout[elementName];
+          let xelement = document.createElement('x-content-placer');
+          if (elementParameters.position) {
+            xelement.setAttribute('x', elementParameters.position.x);
+            xelement.setAttribute('y', elementParameters.position.y);
+          }
+          if (elementParameters.size) {
+            xelement.setAttribute('width', elementParameters.size.width);
+            xelement.setAttribute('height', elementParameters.size.height);
+          }
+          xelement.style.backgroundColor = "red";
+          xapp.appendChild(xelement);
+        }
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <x-app id="x-app" style="background-color: black;">
+  </x-app>
+</body>
+
+</html>
